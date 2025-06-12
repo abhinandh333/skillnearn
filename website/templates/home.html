@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-         <title>Skill N' Earn  </title>
+         <title>Skill π Earn  </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -33,7 +33,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{% static 'website/img/logo/logo1.png' %}" alt="">
+                    <img src="{% static 'website/img/logo/logo.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                         <div class="col-lg-3 col-md-2">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="home.html"><img src="{% static 'website/img/logo/logo.png'%}" alt=""></a>
+                                <a href="{% url 'home' %}"><img src="{% static 'website/img/logo/logo.png'%}" alt=""></a>
                             </div>  
                         </div>
                         <div class="col-lg-9 col-md-9">
@@ -58,17 +58,17 @@
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
                                             <li><a href="{% url 'home' %}">Home</a></li>
-                                            <li><a href="base.html">Find  Employee </a></li>
-                                            <li><a href="base.html">Find Shop or Enterprises</a></li>
-                                            <li><a href="contact.html">contact us</a> 
+                                            <li><a href="{% url 'base' %}">Find  Employee </a></li>
+                                            <li><a href="{% url 'base' %}">Find Shop or Enterprises</a></li>
+                                            <li><a href="{% url 'base' %}">contact us</a> 
                                                <!-- <ul class="submenu"> -->
-                                                   <!-- <li><a href="contact.html">contact</a></li> 
+                                                   <!-- <li><a href=""{% url 'contact' %}"">contact</a></li> 
                                                     <li><a href="single-blog.html"></a></li>
                                                     <li><a href="elements.html"></a></li>
                                                     <li><a href="job_details.html">job Details</a></li> -->
                                                 </ul>
                                             </li>
-                                            <!-- <li><a href="contact.html">Contact</a></li> -->
+                                            <!-- <li><a href=""{% url 'contact' %}"">Contact</a></li> -->
                                         </ul>
                                     </nav>
                                 </div>          
@@ -124,7 +124,7 @@
                                         </div>
                                     </div>
                                     <div class="search-form">
-                                        <a href="base.html">Find job</a>
+                                        <a href="{% url 'base' %}">Find job</a>
                                     </div>	
                                 </form>	
                             </div>
@@ -153,7 +153,7 @@
                                 <span class="flaticon-tour"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Design & Creative</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Design & Creative</a></h5>
                                 <span>(653)</span>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                                 <span class="flaticon-cms"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Design & Development</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Design & Development</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                                 <span class="flaticon-report"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Sales & Marketing</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Sales & Marketing</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                                 <span class="flaticon-app"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Mobile Application</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Mobile Application</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -197,7 +197,7 @@
                                 <span class="flaticon-helmet"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Construction</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Construction</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                                 <span class="flaticon-high-tech"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Information Technology</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Information Technology</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                                 <span class="flaticon-real-estate"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Real Estate</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Real Estate</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                                 <span class="flaticon-content"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="job_listing.html">Content Writer</a></h5>
+                               <h5><a href="{% url 'joblist' %}">Content Writer</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="browse-btn2 text-center mt-50">
-                            <a href="job_listing.html" class="border-btn2">Browse All Sectors</a>
+                            <a href="{% url 'joblist' %}" class="border-btn2">Browse All Sectors</a>
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-10">
                         <div class="cv-caption text-center">
-                            <h1 class="pera1">Skill N' Earn</h1>
+                            <h1 class="pera1">Skill π Earn</h1>
                             <p class="pera2"> Where Real Skills Meet Real Opportunity – The Perfect Fit Starts Here. </p>
                             <a href="https://www.youtube.com/playlist?list=PLFhbPt_nHHPcB-LG1B-QNGz7184bYyyes" class="border-btn2 border-btn4" target="_blank" rel="noopener noreferrer"> For More Details Visit MA </a>
                         </div>
@@ -427,7 +427,7 @@
                              <div class="footer-tittle">
                                  <h4>About Us</h4>
                                  <div class="footer-pera">
-                                     <p>Skill N' Earn.</p>
+                                     <p>Skill π Earn.</p>
                                 </div>
                              </div>
                          </div>
@@ -441,7 +441,7 @@
                                 <ul>
                                     
                                     <li><a href="base.html">Phone : +91 9497200270</a></li>
-                                    <li><a href="base.html">Email : skillnearn333@gmail.com</a></li>
+                                    <li><a href="base.html">Email : skillpiearn333@gmail.com</a></li>
                                 </ul>
                             </div>
 
@@ -452,11 +452,11 @@
                             <div class="footer-tittle">
                                 <h4>Important Link</h4>
                                 <ul>
-                                    <li><a href="home.html"> Home</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href=""{% url 'home' %}""> Home</a></li>
+                                    <li><a href=""{% url 'contact' %}"">Contact Us</a></li>
                                     <li><a href="base.html">Testimonial</a></li>
                                     <li><a href="base.html">Proparties</a></li>
-                                    <li><a href="contact.html">Support</a></li>
+                                    <li><a href="{% url 'contact' %}">Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -493,7 +493,7 @@
                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                           <!-- logo -->
                           <div class="footer-logo mb-20">
-                            <a href="home.html"><img src="{% static 'website/img/logo/logo2_footer.png' %}" alt=""></a>
+                            <a href=""{% url 'home' %}""><img src="{% static 'website/img/logo/logo.png' %}" alt=""></a>
                           </div>
                        </div>
                       <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
@@ -525,9 +525,9 @@
                      <div class="row d-flex justify-content-between align-items-center">
                          <div class="col-xl-10 col-lg-10 ">
                              <div class="footer-copy-right">
-                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                 <p><!-- Link back to Colorlib caπt be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  <!-- Link back to Colorlib caπt be removed. Template is licensed under CC BY 3.0. --></p>
                              </div>
                          </div>
                          <div class="col-xl-2 col-lg-2">

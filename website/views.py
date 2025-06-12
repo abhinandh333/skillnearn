@@ -34,3 +34,5 @@ def index(request):
 def base(request):
     return render(request, 'base.html')
 
+def joblist(request):
+    return render(request, 'joblist.html')
