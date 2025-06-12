@@ -74,8 +74,8 @@
                                 </div>          
                                 <!-- Header-btn -->
                                 <div class="header-btn d-none f-right d-lg-block">
-                                    <a href="base.html" class="btn head-btn1">Register</a>
-                                    <a href="base.html" class="btn head-btn2">Login</a>
+                                    <a href="{% url 'base' %}" class="btn head-btn1">Register</a>
+                                    <a href="{% url 'base' %}" class="btn head-btn2">Login</a>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                         <div class="row">
                             <div class="col-xl-8">
                                 <!-- form -->
-                                <form action="base.html" class="search-box">
+                                <form action="{% url 'base' %}" class="search-box">
                                     <div class="input-form">
                                         <input type="text" placeholder="Job Tittle or keyword">
                                     </div>
@@ -440,8 +440,8 @@
                                 <h4>Contact Info</h4>
                                 <ul>
                                     
-                                    <li><a href="base.html">Phone : +91 9497200270</a></li>
-                                    <li><a href="base.html">Email : skillpiearn333@gmail.com</a></li>
+                                    <li><a href="{% url 'base' %}">Phone : +91 9497200270</a></li>
+                                    <li><a href="{% url 'base' %}">Email : skillpiearn333@gmail.com</a></li>
                                 </ul>
                             </div>
 
@@ -454,8 +454,8 @@
                                 <ul>
                                     <li><a href=""{% url 'home' %}""> Home</a></li>
                                     <li><a href=""{% url 'contact' %}"">Contact Us</a></li>
-                                    <li><a href="base.html">Testimonial</a></li>
-                                    <li><a href="base.html">Proparties</a></li>
+                                    <li><a href="{% url 'base' %}">Testimonial</a></li>
+                                    <li><a href="{% url 'base' %}">Proparties</a></li>
                                     <li><a href="{% url 'contact' %}">Support</a></li>
                                 </ul>
                             </div>
@@ -532,10 +532,10 @@
                          </div>
                          <div class="col-xl-2 col-lg-2">
                              <div class="footer-social f-right">
-                                 <a href="base.html"><i class="fab fa-facebook-f"></i></a>
-                                 <a href="base.html"><i class="fab fa-twitter"></i></a>
-                                 <a href="base.html"><i class="fas fa-globe"></i></a>
-                                 <a href="base.html"><i class="fab fa-behance"></i></a>
+                                 <a href="{% url 'base' %}"><i class="fab fa-facebook-f"></i></a>
+                                 <a href="{% url 'base' %}"><i class="fab fa-twitter"></i></a>
+                                 <a href="{% url 'base' %}"><i class="fas fa-globe"></i></a>
+                                 <a href="{% url 'base' %}"><i class="fab fa-behance"></i></a>
                              </div>
                          </div>
                      </div>
