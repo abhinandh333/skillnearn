@@ -32,7 +32,7 @@
                                         <ul id="navigation">
                                             <li><a href="{% url 'home' %}">Home</a></li>
                                             <li><a href="base.html">Find  Employee </a></li>
-                                            <li><a href="#">Find Shop or Enterprises</a></li>
+                                            <li><a href="base.html">Find Shop or Enterprises</a></li>
                                             <li><a href="contact.html">contact us</a> 
                                                <!-- <ul class="submenu"> -->
                                                    <!-- <li><a href="contact.html">contact</a></li> 
@@ -62,6 +62,60 @@
        </div>
         <!-- Header End -->
     </header>
+
+    
+
+
+    <!-- Under Development Section -->
+<section class="under-dev-section">
+  <div class="notice-card">
+    <h2>🚧 Under Development</h2>
+    <p>This section is under development.<br>Our team will deploy it soon.</p>
+  </div>
+</section>
+
+<style>
+  .under-dev-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f3f4f6;
+
+    .notice-card {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeInUp 1s ease;
+      max-width: 500px;
+      width: 100%;
+
+      h2 {
+        color: #1f2937;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #4b5563;
+        font-size: 16px;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+</style>
 
 
 
