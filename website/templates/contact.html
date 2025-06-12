@@ -132,7 +132,8 @@
                     </div>   
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="{% url 'contact' %}" method="post" id="contactForm" novalidate="novalidate">
+                        <form method="post" action="/contact/">
+
 
                              {% csrf_token %}
                              <div class="row">

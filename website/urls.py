@@ -10,7 +10,5 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('base/', views.base, name='base'),
     path('joblist/', views.base, name='joblist'),
-
-
 ]
 
