@@ -66,56 +66,34 @@
     
 
 
-    <!-- Under Development Section -->
-<section class="under-dev-section">
-  <div class="notice-card">
-    <h2>🚧 Under Development</h2>
-    <p>This section is under development.<br>Our team will deploy it soon.</p>
-  </div>
-</section>
-
-<style>
-  .under-dev-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    background: #f3f4f6;
-
-    .notice-card {
-      background: #ffffff;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      animation: fadeInUp 1s ease;
-      max-width: 500px;
-      width: 100%;
-
-      h2 {
-        color: #1f2937;
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      p {
-        color: #4b5563;
-        font-size: 16px;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
-</style>
+   <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Login</h3>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-danger">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="mb-3">
+                            <label for="phone_number" class="form-label">Phone Number</label>
+                            <input type="text" name="phone_number" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

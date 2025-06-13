@@ -74,6 +74,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 12},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -82,6 +83,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTH_USER_MODEL = 'website.CustomUser'
+
+AUTHENTICATION_BACKENDS = [
+    'website.backends.PhoneNumberBackend',  # use your backend
+    'django.contrib.auth.backends.ModelBackend',  # optional fallback
+]
+
+
+
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
